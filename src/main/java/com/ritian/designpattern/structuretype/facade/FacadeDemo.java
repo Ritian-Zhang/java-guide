@@ -9,7 +9,9 @@ package com.ritian.designpattern.structuretype.facade;
  *     2.子系统角色:实现了子系统的功能。它对客户角色和Facade时未知的。它内部可以有系统内的相互交互，也可以由供外界调用的接口。
  *     3.客户角色:通过调用Facede来完成要实现的功能。
  * </p>
- * <a>参考链接：https://www.cnblogs.com/lthIU/p/5860607.html</a>
+ * <a>
+ *     ：https://www.cnblogs.com/lthIU/p/5860607.html
+ * </a>
  * @author ritian.Zhang
  * @date 2019/04/26
  **/
@@ -40,6 +42,7 @@ class Computer{
         disk = new Disk();
         memory = new Memory();
     }
+
 
     public void start(){
         System.out.println("Computer start begin");
