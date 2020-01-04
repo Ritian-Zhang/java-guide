@@ -240,13 +240,19 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
     @Override
     public int indexOf(Object o) {
         if (o == null) {
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++){
                 if (elementData[i] == null)
+                {
                     return i;
+                }
+            }
+
         } else {
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++){
                 if (o.equals(elementData[i]))
-                    return i;
+                { return i;}
+            }
+
         }
         return -1;
     }
@@ -261,13 +267,16 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
     @Override
     public int lastIndexOf(Object o) {
         if (o == null) {
-            for (int i = size - 1; i >= 0; i--)
+            for (int i = size - 1; i >= 0; i--){
                 if (elementData[i] == null)
-                    return i;
+                {return i;}
+            }
         } else {
-            for (int i = size - 1; i >= 0; i--)
-                if (o.equals(elementData[i]))
+            for (int i = size - 1; i >= 0; i--){
+                if (o.equals(elementData[i])){
                     return i;
+                }
+            }
         }
         return -1;
     }
@@ -305,6 +314,7 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
      * @return an array containing all of the elements in this list in
      * proper sequence
      */
+    @Override
     public Object[] toArray() {
         return Arrays.copyOf(elementData, size);
     }
@@ -377,6 +387,7 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
      * @param element element to be inserted
      * @throws IndexOutOfBoundsException {@inheritDoc}
      */
+    @Override
     public void add(int index, E element) {
         rangeCheckForAdd(index);
 
@@ -433,17 +444,20 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
     @Override
     public boolean remove(Object o) {
         if (o == null) {
-            for (int index = 0; index < size; index++)
+            for (int index = 0; index < size; index++){
                 if (elementData[index] == null) {
                     fastRemove(index);
                     return true;
                 }
+            }
+
         } else {
-            for (int index = 0; index < size; index++)
+            for (int index = 0; index < size; index++){
                 if (o.equals(elementData[index])) {
                     fastRemove(index);
                     return true;
                 }
+            }
         }
         return false;
     }
@@ -482,8 +496,17 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
      * which throws an ArrayIndexOutOfBoundsException if index is negative.
      */
     private void rangeCheck(int index) {
-        if (index >= size)
+        if (index >= size){
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+        }
+    }
+    /**
+     * A version of rangeCheck used by add and addAll.
+     */
+    private void rangeCheckForAdd(int index) {
+        if (index > size || index < 0){
+            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+        }
     }
 
     /**
