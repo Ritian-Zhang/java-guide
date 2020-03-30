@@ -1,4 +1,4 @@
-package com.ritian.datastructure.soucecode;
+package com.ritian.datastructure.sourcecode;
 
 import lombok.extern.slf4j.Slf4j;
 
