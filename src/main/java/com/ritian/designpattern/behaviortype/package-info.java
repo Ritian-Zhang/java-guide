@@ -14,6 +14,7 @@ package com.ritian.designpattern.behaviortype;
 * 3.观察者模式 4.迭代子模式 5.责任链模式 6.命令模式
 *
 * 第三类：类的状态
+* 7.状态模式 8.备忘录模式
 *
 * 第四类：通过中间类
 *
