@@ -1,4 +1,4 @@
-package com.ritian.map;
+package com.ritian.datastructure.map;
 
 import java.util.*;
 
