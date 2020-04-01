@@ -48,6 +48,17 @@
 <br>==**allKeys-random**==	从所有KV集中随机选择数据淘汰
 <br>==**noeviction**==	不淘汰策略，若超过最大内存，返回错误信息
 #### 持久化
+>**RDB(Redis DataBase)**：快照形式是直接把内存中的数据保存到一个dump的文件中，定时保存，保存策略。
+<br>==优点==：1 适合大规模的数据恢复。
+2 如果业务对数据完整性和一致性要求不高，RDB是很好的选择。<br>==缺点==：1 数据的完整性和一致性不高，因为RDB可能在最后一次备份时宕机了。
+2 备份时占用内存
+<br>**AOF(Append Only File)**：把所有的对Redis的服务器进行修改的命令都存到一个文件里，命令的集合。
+<br>==优点==：数据的完整性和一致性更高 <br>==缺点==：
+因为AOF记录的内容多，文件会越来越大，数据恢复也会越来越慢
+<br>参考[《Redis 持久化之RDB和AOF》](https://www.cnblogs.com/itdragon/p/7906481.html)
 #### 主从复制
+<br>参考[《Redis主从复制和集群配置》](https://blog.csdn.net/u011204847/article/details/51307044?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)
 #### 哨兵
+<br>参考[《深入学习Redis（4）：哨兵》](https://www.cnblogs.com/kismetv/p/9609938.html)
 #### 总结
+>Redis是什么，Redis的特点和功能，Redis缓存的使用，Redis为什么能这么快，Redis缓存的淘汰策略，持久化的两种方式，Redis高可用部分的主从复制和哨兵的基本原理。。只要功夫深，铁杵磨成针，平时准备好，面试不用慌。虽然面试不一定是这样问的，但万变不离其“宗”。
