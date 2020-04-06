@@ -1,7 +1,5 @@
 package com.ritian.jvm;
 
-import com.ritian.thread.PriDemo;
-
 /**
  * VM args<p> -verbose:gc -Xms20m -Xmx20m -Xmn10m -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:+UseSerialGC</p>
  *
