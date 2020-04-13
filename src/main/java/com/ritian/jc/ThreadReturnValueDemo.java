@@ -1,4 +1,4 @@
-package com.ritian.thread;
+package com.ritian.jc;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;

@@ -1,4 +1,4 @@
-package com.ritian.thread.pool;
+package com.ritian.jc.pool;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;

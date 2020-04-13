@@ -1,4 +1,4 @@
-package com.ritian.thread.aqs;
+package com.ritian.jc.aqs;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,4 +1,4 @@
-package com.ritian.thread.pool;
+package com.ritian.jc.pool;
 
 
 import cn.hutool.core.thread.ThreadUtil;

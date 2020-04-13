@@ -4,7 +4,7 @@
  * @author ritian
  * @since 2019/12/10 16:08
  **/
-package com.ritian.thread;
+package com.ritian.jc;
 
 
 //           extends                     implements                            extends

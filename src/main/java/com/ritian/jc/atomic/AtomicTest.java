@@ -1,4 +1,4 @@
-package com.ritian.thread.atomic;
+package com.ritian.jc.atomic;
 
 /**
  * TODO

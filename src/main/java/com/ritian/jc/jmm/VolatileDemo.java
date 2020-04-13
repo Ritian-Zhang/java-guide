@@ -1,4 +1,4 @@
-package com.ritian.thread.jmm;
+package com.ritian.jc.jmm;
 
 import lombok.extern.slf4j.Slf4j;
 

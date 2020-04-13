@@ -1,8 +1,7 @@
-package com.ritian.thread;
+package com.ritian.jc;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * JAVA原子操作类

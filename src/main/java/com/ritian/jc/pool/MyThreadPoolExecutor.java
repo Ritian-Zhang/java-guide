@@ -1,4 +1,4 @@
-package com.ritian.thread.pool;
+package com.ritian.jc.pool;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.RejectedExecutionHandler;

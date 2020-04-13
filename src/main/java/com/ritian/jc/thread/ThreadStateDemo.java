@@ -1,4 +1,4 @@
-package com.ritian.thread;
+package com.ritian.jc.thread;
 
 /**
  * 线程状态

@@ -1,4 +1,4 @@
-package com.ritian.thread.jmm;
+package com.ritian.jc.jmm;
 
 import cn.hutool.core.thread.ThreadUtil;
 

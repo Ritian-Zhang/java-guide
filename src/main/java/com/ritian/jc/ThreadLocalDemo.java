@@ -1,4 +1,4 @@
-package com.ritian.thread;
+package com.ritian.jc;
 
 import cn.hutool.core.thread.ThreadUtil;
 import lombok.extern.slf4j.Slf4j;
