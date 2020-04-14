@@ -1,4 +1,4 @@
-package com.ritian.lock;
+package com.ritian.jc.lock;
 
 /**
  * 死锁
