@@ -1,4 +1,4 @@
-package com.ritian.jc.lock;
+package com.ritian.jc.aqs;
 
 import cn.hutool.core.thread.ThreadUtil;
 
