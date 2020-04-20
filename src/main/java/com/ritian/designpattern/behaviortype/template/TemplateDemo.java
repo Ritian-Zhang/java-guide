@@ -35,7 +35,8 @@ abstract class Game{
     abstract void startPlay();
     abstract void endPlay();
 
-    public  void play(){
+    //模版方法
+    public  final void play(){
         initialize();
         startPlay();
         endPlay();
