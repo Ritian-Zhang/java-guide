@@ -3,10 +3,7 @@ package com.ritian.datastructure.sourcecode;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.AbstractMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 /**
  * HashMap源码分析
@@ -20,8 +17,10 @@ import java.util.Set;
  * @author ritian
  * @since 2019/12/31 10:30
  **/
-public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Cloneable, Serializable {
+public class HashMapBak<K, V> extends AbstractMap<K, V> implements Map<K, V>, Cloneable, Serializable {
 
+
+    HashMap
 
     private static final long serialVersionUID = 3943095358217396223L;
 
@@ -183,7 +182,7 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
 
     transient int size;
     /**
-     * HashMap 的修改次数
+     * HashMapBak 的修改次数
      */
     transient int modCount;
     /**
@@ -201,7 +200,7 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
     /**
      * 构造方法
      */
-    public HashMap(int initialCapacity, float loadFactor) {
+    public HashMapBak(int initialCapacity, float loadFactor) {
         if (initialCapacity < 0)
             throw new IllegalArgumentException("Illegal initial capacity: " +
                     initialCapacity);
@@ -214,19 +213,19 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
         this.threshold = tableSizeFor(initialCapacity);
     }
 
-    public HashMap(int initialCapacity) {
+    public HashMapBak(int initialCapacity) {
         this(initialCapacity, DEFAULT_LOAD_FACTOR);
     }
 
     /**
      * 默认构造函数
      */
-    public HashMap() {
+    public HashMapBak() {
         // all other fields defaulted
         this.loadFactor = DEFAULT_LOAD_FACTOR;
     }
 
-    public HashMap(Map<? extends K, ? extends V> m) {
+    public HashMapBak(Map<? extends K, ? extends V> m) {
         this.loadFactor = DEFAULT_LOAD_FACTOR;
 //        putMapEntries(m, false);
     }
