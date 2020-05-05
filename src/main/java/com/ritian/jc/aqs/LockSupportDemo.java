@@ -1,15 +1,18 @@
 package com.ritian.jc.aqs;
 
 import cn.hutool.core.thread.ThreadUtil;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.locks.LockSupport;
 
 /**
  * LockSupport工具类
+ * <p>用来阻塞线程和唤醒线程
  *
  * @author ritian
  * @since 2020/4/14 11:05
  **/
+@Slf4j
 public class LockSupportDemo {
 
 
@@ -17,14 +20,33 @@ public class LockSupportDemo {
 //        LockSupportDemo.testPark();
 //        LockSupportDemo.testParkNanos();
 //        LockSupportDemo.testParkUntil();
-        LockSupportDemo.testUnpark();
+        LockSupportDemo.test2();
 
     }
+
+    public static void test2(){
+        Thread thread = Thread.currentThread();
+        LockSupport.unpark(thread);
+        System.out.println("a");
+        LockSupport.park();
+        System.out.println("b");
+        LockSupport.park();
+        System.out.println("c");
+    }
+
+    public static void unpark(Thread thread){
+        ThreadUtil.sleep(2000);
+        System.out.println("unpark");
+//        thread.interrupt();
+        LockSupport.unpark(thread);
+    }
+
 
     /**
      * 阻塞当前线程，如果调用unpark(Thread thread)方法或者当前线程被中断，才能从park()方法返回
      */
     public static void testPark() {
+        System.out.println(Thread.currentThread().getName()+" park");
         LockSupport.park();
         System.out.println("blocked .");
     }
