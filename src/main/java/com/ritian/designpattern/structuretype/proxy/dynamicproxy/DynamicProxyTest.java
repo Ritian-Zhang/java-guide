@@ -12,7 +12,12 @@ public class DynamicProxyTest {
 
     public static void main(String[] args) {
         UserDao target = new UserService();
-        UserDao proxy = (UserDao) new ProxyFactory(target).getProxyInstance();
+//        UserDao proxy = (UserDao) new ProxyFactory(target).getProxyInstance();
+//        proxy.save();
+
+
+        /////////2/////////
+        UserDao proxy = (UserDao) new ProxyHandler(target).getProxyInstance();
         proxy.save();
     }
 }
