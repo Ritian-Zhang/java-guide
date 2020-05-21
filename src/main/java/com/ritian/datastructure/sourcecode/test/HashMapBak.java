@@ -1,4 +1,4 @@
-package com.ritian.datastructure.sourcecode;
+package com.ritian.datastructure.sourcecode.test;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -20,7 +20,6 @@ import java.util.*;
 public class HashMapBak<K, V> extends AbstractMap<K, V> implements Map<K, V>, Cloneable, Serializable {
 
 
-    HashMap
 
     private static final long serialVersionUID = 3943095358217396223L;
 
